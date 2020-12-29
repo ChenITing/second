@@ -1,11 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>懷舊柑仔店-首頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #EFD78D;
+            background-image: url(/image/圖片12.png);
+            background-size: 100px;
+            font-family: "微軟正黑體";
+            text-align: center;
+            overflow: auto;
+        }
+
+
+        #slidern {
+            margin: 0 auto;
+            width: 1000px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        #slidern input[type=radio] {
+            display: none;
+        }
+
+        #slidern label {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #slides {
+            /* padding: 1px 5px; */
+            /* border: 2px solid #ccc; */
+            /* background: #fff; */
+            position: relative;
+            z-index: 1;
+        }
+
+        #overflow {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #slide1:checked~#slides .inner {
+            margin-left: 0;
+        }
+
+        #slide2:checked~#slides .inner {
+            margin-left: -100%;
+        }
+
+        #slide3:checked~#slides .inner {
+            margin-left: -200%;
+        }
+
+        #slide4:checked~#slides .inner {
+            margin-left: -300%;
+        }
+
+        #slides .inner {
+            transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+            width: 400%;
+            /* line-height: 0;
+            height: 500px;
+            padding: 4px; */
+        }
+
+        #slides .slide {
+            width: 25%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /* color: #fff; */
+        }
+
+        /* #slides .slide_1 {
+            background: #00171F;
+        } */
+
+        /* #slides .slide_2 {
+            background: #003459;
+        }
+
+        #slides .slide_3 {
+            background: #007EA7;
+        }
+
+        #slides .slide_4 {
+            background: #00A8E8;
+        } */
+
+        #controls {
+            margin: -180px 0 0 0;
+            width: 100%;
+            height: 50px;
+            z-index: 3;
+            position: relative;
+        }
+
+        #controls label {
+            transition: opacity 0.2s ease-out;
+            display: none;
+            width: 50px;
+            height: 50px;
+            opacity: .4;
+        }
+
+        #controls label:hover {
+            opacity: 1;
+        }
+
+        #slide1:checked~#controls label:nth-child(2),
+        #slide2:checked~#controls label:nth-child(3),
+        #slide3:checked~#controls label:nth-child(4),
+        #slide4:checked~#controls label:nth-child(1) {
+            float: right;
+            margin: 0 -50px 0 0;
+            display: block;
+        }
+
+        #slide1:checked~#controls label:nth-last-child(2),
+        #slide2:checked~#controls label:nth-last-child(3),
+        #slide3:checked~#controls label:nth-last-child(4),
+        #slide4:checked~#controls label:nth-last-child(1) {
+            float: left;
+            margin: 0 0 0 -50px;
+            display: block;
+        }
+
+        #bullets {
+            margin: 150px 0 0;
+            text-align: center;
+        }
+
+        #bullets label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: #ccc;
+            margin: 0 10px;
+        }
+
+        #slide1:checked~#bullets label:nth-child(1),
+        #slide2:checked~#bullets label:nth-child(2),
+        #slide3:checked~#bullets label:nth-child(3),
+        #slide4:checked~#bullets label:nth-child(4) {
+            background: #444;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            #slide1:checked~#controls label:nth-child(2),
+            #slide2:checked~#controls label:nth-child(3),
+            #slide3:checked~#controls label:nth-child(4),
+            #slide4:checked~#controls label:nth-child(1),
+            #slide1:checked~#controls label:nth-last-child(2),
+            #slide2:checked~#controls label:nth-last-child(3),
+            #slide3:checked~#controls label:nth-last-child(4),
+            #slide4:checked~#controls label:nth-last-child(1) {
+                margin: 0;
+            }
+
+            #slides {
+                max-width: calc(100% - 140px);
+                margin: 0 auto;
+            }
+        }
+
+        /* .head {
+            margin: 0%;
+            padding: 0%;
+            width: 100%;
+            height: 13%;
+            background-color: #E97E2E;
+        } */
+
+        audio {
+            width: 200px;
+            height: 20px;
+            position: absolute;
+            top: 13%;
+            left: 0%;
+        }
+
+        .wrapper {
+            align-items: center;
+            padding:2px;
+            min-height: 100%;
+            /*外層高度100%*/
+            margin-bottom: -50px;
+            margin: 0%;
+            /*隨footer高度需做調整*/
+        }
+
+        .content {
+            padding-bottom: 50px;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0%;
+            height: 50px;
+            width: 100%;
+            background: #E97E2E;
+            font-weight: bold;
+            font-family: 微軟正黑體;
+
+            color: rgba(230, 230, 230, 0.9);
+
+        }
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "微軟正黑體";
+            font-weight: bold;
+        } */
+
+        #sidebar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background: rgba(230, 230, 230, 0.5);
+            left: -200px;
+            transition: all 500ms linear;
+            z-index: 3;
+        }
+
+        #sidebar.active {
+            left: 0px;
+        }
+
+        #sidebar ul li {
+            color: #E97E2E;
+            font-weight: 600;
+            list-style: none;
+            padding: 15px 1px;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+        }
+        #sidebar ul li audio{
+            position: absolute;
+            top: 0px;
+        }
+
+        #sidebar .toggle-btn {
+            position: absolute;
+            left: 230px;
+            top: 20px;
+        }
+
+        #sidebar .toggle-btn span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #642100;
+            margin: 5px 0px;
+
+        }
+        .testimonial {
+            background: white;
+            text-align: center;
+            padding: 30px 30px 50px;
+            margin: 0 15px 100px;
+            position: relative;
+            margin-top: 168px;
+        }
+
+        .testimonial:before,
+        .testimonial:after {
+            content: "";
+            border-top: 40px solid white;
+            border-right: 125px solid teansparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+        }
+
+        /* .testimonial:after{
+            border-right: none;
+            border-left: 125px solid transparent;
+            left: auto;
+            right: 0;
+        } */
+        /* .testimonial .icon{
+            display: inline-block;
+            font-size: 80px;
+            color: #f28a0b;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        } */
+
+        .testimonial .description {
+            font-size: 16px;
+            color: #777;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: -1px;
+        }
+
+        .testimonial .testimonial-content {
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        .testimonial .pic {
+            display: inline-block;
+            border: 6px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px 2px #f4770b;
+            overflow: hidden;
+            z-index: 1;
+            position: relative;
+        }
+
+        .testimonial .pic img {
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonial .title {
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-transform: capitalize;
+            margin: 0 0 5px 0;
+        }
+
+        .testimonial .post {
+            display: block;
+            font-size: 14px;
+            color: #ffd9b8;
+        }
+
+        .pic img {
+            width: 100px !important;
+            height: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle('active');
+        }
+    </script>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><img src="image/playern.gif" width="100"><audio muted src="music/雨夜花.mp3" controls autoplay loop></audio></li>
+            <li>Home</li>
+            <li><img src="image/bag.png" width="30px">&emsp;Shopping Bag</li>
+            <li>Our Products</li>
+            <li>Top Sales</li>
+            <li>Random</li>
+            <li>About Us</li>
+            <li>Sign In/Sign Up</li>
+        </ul>
+    </div>
 </body>
+<div class="head"></div>
+
+<div class="wrapper">
+    <img src="image/title.png" width="300">
+    <div class="content">
+        <div id="slidern">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <img src="image/圖片1.png" width="80%">
+                            </div>
+                        </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <img src="image/圖片2.png" width="80%">
+                            </div>
+                        </div>
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <img src="image/圖片3.png" width="80%">
+                            </div>
+                        </div>
+                        <div class="slide slide_4">
+                            <div class="slide-content">
+                                <img src="image/圖片4.png" width="80%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+            <div id="bullets">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+        </div>
+        <div class="demo">
+            <div class="container">
+                <div class="row">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, fuga
+                                quam ex reprehenderit, neque nostrum vero facere a suscipit earum animi possimus tempore
+                                exercitationem amet, officiis qui voluptate dolorum nihil.</p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="image/圖片12.png" alt="">
+                                </div>
+                                <h3 class="title">williamson</h3>
+                                <span class="post">web</span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-lef"></span>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, fuga
+                                quam ex reprehenderit, neque nostrum vero facere a suscipit earum animi possimus tempore
+                                exercitationem amet, officiis qui voluptate dolorum nihil.</p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="image/playern.gif" alt="">
+                                </div>
+                                <h3 class="title">williamson</h3>
+                                <span class="post">web</span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-lef"></span>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, fuga
+                                quam ex reprehenderit, neque nostrum vero facere a suscipit earum animi possimus tempore
+                                exercitationem amet, officiis qui voluptate dolorum nihil.</p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="image/wave.gif" alt="">
+                                </div>
+                                <h3 class="title">williamson</h3>
+                                <span class="post">web</span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-lef"></span>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, fuga
+                                quam ex reprehenderit, neque nostrum vero facere a suscipit earum animi possimus tempore
+                                exercitationem amet, officiis qui voluptate dolorum nihil.</p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="image/wave.gif" alt="">
+                                </div>
+                                <h3 class="title">williamson</h3>
+                                <span class="post">web</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+        </script>
+    
+        <script>
+            $(document).ready(function(){
+                $("#testimonial-slider").owlCarousel({
+                    items:3,
+                    itemsDesktop:[1000,3],
+                    itemsDesktopSmall:[979,2],
+                    itemsTablet:[768,2],
+                    itemsMoblie:[650,1],
+                    pagination:true,
+                    autoPlay:true
+                })
+            });
+        </script>
+        </div>
+    </div>
+    <div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com"
+            style="color: #874338;">&emsp;click
+            here!</a>&emsp;Copyright@2020&ensp;cyim105&ensp;IMHuaiJiuGanZaiDian<br>Tel:886-3-265-5401&emsp;Address:320314桃園市中壢區中北路200號
+    </div>
+    </body>
+
 </html>
