@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>懷舊柑仔店-首頁</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
         html,
@@ -21,11 +26,14 @@
             text-align: center;
             overflow: auto;
         }
+
+
         .head {
             margin: 0%;
-            padding: 1%;
-            width: 95%;
-            height: 200px;
+            padding: 2%;
+            width: 100%;
+            height: 13%;
+            /* background-color: #E97E2E; */
         }
 
         audio {
@@ -39,8 +47,11 @@
         .wrapper {
             align-items: center;
             padding: 2px;
+            min-height: 100%;
+            /*外層高度100%*/
             margin-bottom: -50px;
             margin: 0%;
+            /*隨footer高度需做調整*/
         }
 
         .content {
@@ -48,23 +59,29 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: -10%;
-            height: 60px;
+            position: relative;
+            bottom: -40%;
+            height: 50px;
             width: 100%;
             background: #4e1f08c5;
             font-weight: bold;
             font-family: 微軟正黑體;
-
             color: rgba(230, 230, 230, 0.9);
 
         }
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "微軟正黑體";
+            font-weight: bold;
+        } */
 
         #sidebar {
             position: fixed;
             width: 200px;
             height: 100%;
-            background: rgba(230, 230, 230, 0.5);
+            background: rgba(230, 230, 230, 0.7);
             left: -200px;
             transition: all 500ms linear;
             z-index: 3;
@@ -75,7 +92,7 @@
         }
 
         #sidebar ul li {
-            color:#4e1f08c5;
+            color: #4e1f08c5;
             font-weight: 600;
             list-style: none;
             padding: 15px 1px;
@@ -102,21 +119,40 @@
 
         }
 
-        #user {
-            width: 290px;
-            height: 26px;
-            font-size: 22px;
+        table {
+            position: relative;
+            left: auto;
+            top: 190px;
+            border: 3px solid #4e1f08c5;
+            width: 800px;
+            height: 200px;
+            text-align: center;
+            font-size: 30px;
+            font-family: '微軟正黑體';
+            padding: 0px;
         }
 
-        #signup {
-            width: 90px;
-            height: 37px;
+        td,
+        tr {
+            border: black 2px solid;
+        }
+        .price{
+            position: relative;
+            top: 280px;
+            left: 270px;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: '微軟正黑體';
+        }
+        #sendout {
+            width: 160px;
+            height: 40px;
             font-size: 20px;
             font-weight: 600;
-            background-color: yellow;
+            background-color:#4e1f08c5;
             border: 1px solid white;
             border-radius: 10px;
-            color: black;
+            color: white;
         }
     </style>
 </head>
@@ -147,18 +183,33 @@
         </ul>
     </div>
 </body>
-<div class="head">
-    <img src="../image/logo.png" width="965" height="160"></div>
+<div class="head"><img src="../image/logo.png" width="965" height="160"></div>
 <div class="wrapper">
-    <div class="content" style="position: absolute; top: 200px; left: 290px;">
-        <img src="../image/signup.png" width="800" height="400">
-        <input style="position: absolute; top: 128px; left: 285px;" type="text" id="user" placeholder="輸入帳號">
-        <input style="position: absolute; top: 172px; left: 285px;" type="text" id="user" placeholder="輸入密碼">
-        <input style="position: absolute; top: 219px; left: 285px;" type="text" id="user" placeholder="輸入收件人">
-        <!-- <input style="position: absolute; top: 240px; left: 285px;" type="text" id="user" placeholder="輸入收件地址"> -->
-        <input style="position: absolute; top: 265px; left: 285px;" type="text" id="user" placeholder="輸入電子郵件">
-        <input style="position: absolute; top: 314px; left: 285px;" type="text" id="user" placeholder="輸入手機號碼">
-        <input style="position: absolute; top: 210px; left: 610px;" type="submit" id="signup" value="Sign Up">
+    <div class="content">
+        <table align="center">
+            <tr>
+            <td colspan="2">品項</td>
+            <td>數量</td>
+            </tr>
+            <tr>
+                <td><img src="../image/dd.png" width="200px"></td>
+                <td>足球巧克力 單價: NT$ 5<br>
+                    Football Chocolate <br>Price: NT $5/EA
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><img src="../image/ee.png" width="200px"></td>
+                <td>跳跳糖 單價: NT$ 10/pac<br> 
+                    Popping Candy <br> Price: NT$ 10/PK</td>
+                <td>5</td>
+            </tr>
+        </table><br>
+        <div><input type="text" name="address" placeholder="輸入收件地址  Please enter your shipping address." style="position: relative; top: 200px; width: 750px; font-size: 20px;"></div>
+        <div class="price">Total: NT$ 60</div>
+        <input style="position: relative; top: 235px; left: -40px;" type="submit" id="sendout" value="Send Out"></a>
+
+
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
@@ -179,10 +230,11 @@
         </script>
     </div>
 </div>
-<div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com" style="color: #E97E2E;">&emsp;click
+<div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com" style="color: #f4770b;">&emsp;click
         here!</a>&emsp;Copyright@2020&ensp;cyim105&ensp;IMHuaiJiuGanZaiDian &emsp;for
-        learning<br>Tel:886-3-265-5401&emsp;Address: 320314 No. 200, Zhongbei Rd., Zhongli Dist., Taoyuan City 320314,
-        Taiwan (R.O.C.)
+    learning<br>Tel:886-3-265-5401&emsp;Address: 320314 No. 200, Zhongbei Rd., Zhongli Dist., Taoyuan City 320314,
+    Taiwan (R.O.C.)
 </div>
 </body>
+
 </html>
