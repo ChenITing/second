@@ -1,0 +1,108 @@
+html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #EFD78D;
+            background-image: url(../image/圖片12.png);
+            background-size: 100px;
+            font-family: "微軟正黑體";
+            text-align: center;
+            overflow: auto;
+        }
+        .head {
+            margin: 0%;
+            padding: 1%;
+            width: 95%;
+            height: 200px;
+        }
+
+        audio {
+            width: 200px;
+            height: 20px;
+            position: absolute;
+            top: 13%;
+            left: 0%;
+        }
+
+        .wrapper {
+            align-items: center;
+            padding: 2px;
+            margin-bottom: -50px;
+            margin: 0%;
+        }
+
+        .content {
+            padding-bottom: 50px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: -10%;
+            height: 60px;
+            width: 100%;
+            background: #4e1f08c5;
+            font-weight: bold;
+            font-family: 微軟正黑體;
+
+            color: rgba(230, 230, 230, 0.9);
+
+        }
+
+        #sidebar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background: rgba(230, 230, 230, 0.5);
+            left: -200px;
+            transition: all 500ms linear;
+            z-index: 3;
+        }
+
+        #sidebar.active {
+            left: 0px;
+        }
+
+        #sidebar ul li {
+            color:#4e1f08c5;
+            font-weight: 600;
+            list-style: none;
+            padding: 15px 1px;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+        }
+
+        #sidebar ul li audio {
+            position: absolute;
+            top: 0px;
+        }
+
+        #sidebar .toggle-btn {
+            position: absolute;
+            left: 230px;
+            top: 20px;
+        }
+
+        #sidebar .toggle-btn span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #4e1f08c5;
+            margin: 5px 0px;
+
+        }
+
+        #user {
+            width: 290px;
+            height: 26px;
+            font-size: 22px;
+        }
+
+        #signup {
+            width: 90px;
+            height: 37px;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: yellow;
+            border: 1px solid white;
+            border-radius: 10px;
+            color: black;
+        }

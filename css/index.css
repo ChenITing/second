@@ -1,0 +1,310 @@
+       html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #EFD78D;
+            background-image: url(../image/圖片12.png);
+            background-size: 100px;
+            font-family: "微軟正黑體";
+            text-align: center;
+            overflow: auto;
+        }
+
+
+        #slidern {
+            margin: 100px auto;
+            width: 1000px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        #slidern input[type=radio] {
+            display: none;
+        }
+
+        #slidern label {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #slides {
+            position: relative;
+            z-index: 1;
+        }
+
+        #overflow {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #slide1:checked~#slides .inner {
+            margin-left: 0;
+        }
+
+        #slide2:checked~#slides .inner {
+            margin-left: -100%;
+        }
+
+        #slide3:checked~#slides .inner {
+            margin-left: -200%;
+        }
+
+        #slide4:checked~#slides .inner {
+            margin-left: -300%;
+        }
+
+        #slides .inner {
+            transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+            width: 400%;
+        }
+
+        #slides .slide {
+            width: 25%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #controls {
+            margin: -180px 0 0 0;
+            width: 100%;
+            height: 50px;
+            z-index: 3;
+            position: relative;
+        }
+
+        #controls label {
+            transition: opacity 0.2s ease-out;
+            display: none;
+            width: 50px;
+            height: 50px;
+            opacity: .4;
+        }
+
+        #controls label:hover {
+            opacity: 1;
+        }
+
+        #slide1:checked~#controls label:nth-child(2),
+        #slide2:checked~#controls label:nth-child(3),
+        #slide3:checked~#controls label:nth-child(4),
+        #slide4:checked~#controls label:nth-child(1) {
+            float: right;
+            margin: 0 -50px 0 0;
+            display: block;
+        }
+
+        #slide1:checked~#controls label:nth-last-child(2),
+        #slide2:checked~#controls label:nth-last-child(3),
+        #slide3:checked~#controls label:nth-last-child(4),
+        #slide4:checked~#controls label:nth-last-child(1) {
+            float: left;
+            margin: 0 0 0 -50px;
+            display: block;
+        }
+
+        #bullets {
+            margin: 150px 0 0;
+            text-align: center;
+        }
+
+        #bullets label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: #ccc;
+            margin: 0 10px;
+        }
+
+        #slide1:checked~#bullets label:nth-child(1),
+        #slide2:checked~#bullets label:nth-child(2),
+        #slide3:checked~#bullets label:nth-child(3),
+        #slide4:checked~#bullets label:nth-child(4) {
+            background: #444;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            #slide1:checked~#controls label:nth-child(2),
+            #slide2:checked~#controls label:nth-child(3),
+            #slide3:checked~#controls label:nth-child(4),
+            #slide4:checked~#controls label:nth-child(1),
+            #slide1:checked~#controls label:nth-last-child(2),
+            #slide2:checked~#controls label:nth-last-child(3),
+            #slide3:checked~#controls label:nth-last-child(4),
+            #slide4:checked~#controls label:nth-last-child(1) {
+                margin: 0;
+            }
+
+            #slides {
+                max-width: calc(100% - 140px);
+                margin: 0 auto;
+            }
+        }
+
+        .head {
+            margin: 0%;
+            padding: 2%;
+            width: 100%;
+            height: 13%;
+        }
+
+        audio {
+            width: 200px;
+            height: 20px;
+            position: absolute;
+            top: 13%;
+            left: 0%;
+        }
+
+        .wrapper {
+            align-items: center;
+            padding: 2px;
+            min-height: 100%;
+            /*外層高度100%*/
+            margin-bottom: -50px;
+            margin: 0%;
+            /*隨footer高度需做調整*/
+        }
+
+        .content {
+            padding-bottom: 50px;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0%;
+            height: 50px;
+            width: 100%;
+            background: #4e1f08c5;
+            font-weight: bold;
+            font-family: 微軟正黑體;
+
+            color: rgba(230, 230, 230, 0.9);
+
+        }
+
+        #sidebar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background: rgba(230, 230, 230, 0.7);
+            left: -200px;
+            transition: all 500ms linear;
+            z-index: 3;
+        }
+
+        #sidebar.active {
+            left: 0px;
+        }
+
+        #sidebar ul li {
+            color: #4e1f08c5;
+            font-weight: 600;
+            list-style: none;
+            padding: 15px 1px;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+        }
+
+        #sidebar ul li audio {
+            position: absolute;
+            top: 0px;
+        }
+
+        #sidebar .toggle-btn {
+            position: absolute;
+            left: 230px;
+            top: 20px;
+        }
+
+        #sidebar .toggle-btn span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #4e1f08c5;
+            margin: 5px 0px;
+
+        }
+
+        .testimonial {
+            background: white;
+            text-align: center;
+            padding: 30px 30px 50px;
+            margin: 0 15px 130px;
+            position: relative;
+            margin-top: 168px;
+            height: 420px;
+            border:  #aaa solid 2px;
+            border-radius: 10%;
+        }
+
+        .testimonial:before,
+        .testimonial:after {
+            content: "";
+            border-top: 40px solid white;
+            border-right: 125px solid teansparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+        }
+
+        .testimonial .description {
+            font-size: 20px;
+            font-weight: 700;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: -1px;
+        }
+        .testimonial .testimonial-content {
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        .testimonial .pic {
+            display: inline-block;
+            border: 6px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px 2px  #4e1f08c5;
+            overflow: hidden;
+            z-index: 1;
+            position: relative;
+        }
+
+        .testimonial .pic img {
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonial .title {
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-transform: capitalize;
+            margin: 0 0 5px 0;
+        }
+
+        .testimonial .post {
+            display: block;
+            font-size: 40px;
+            font-weight: 600;
+            color: #4e1f08c5;
+        }
+
+
+        .pic img {
+            width: 200px !important;
+            height: 1000px;
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 600;
+            font-family: '微軟正黑體';
+            color: #4e1f08c5;
+        }
