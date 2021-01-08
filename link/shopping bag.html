@@ -27,7 +27,8 @@
             <li><img src="../image/playern.gif" width="100"><audio muted src="../music/雨夜花.mp3" controls autoplay
                     loop></audio></li>
             <li><a href="../index.html" style="color: #4e1f08c5;">Home</a></li>
-            <li><a href="../link/shopping bag.html" style="color: #4e1f08c5;"><img src="../image/bag.png" width="30px">&emsp;Shopping Bag</a></li>
+            <li><a href="../link/shopping bag.html" style="color: #4e1f08c5;"><img src="../image/bag.png"
+                        width="30px">&emsp;Shopping Bag</a></li>
             <li><a href="../link/ourPrduct.html" style="color: #4e1f08c5;">Our Products</a></li>
             <li><a href="../link/Top Sale.html" style="color: #4e1f08c5;">Top Sales</a></li>
             <li><a href="../link/About Us.html" style="color: #4e1f08c5;">About Us</a></li>
@@ -36,31 +37,145 @@
     </div>
 </body>
 <div class="head">
-    <a href="../index.html"><img src="../image/logo.png" width="965" height="160"></a></div>
+    <a href="../index.html"><img src="../image/logo.png" width="965" height="160"></a>
+</div>
 <div class="wrapper">
     <div class="content">
         <table align="center">
             <tr>
-            <td colspan="2">品項</td>
-            <td>數量</td>
+                <td colspan="2">品項</td>
+                <td>數量</td>
+            </tr>
+            <tr>
+                <td><img src="../image/aa.png" width="200px"></td>
+                <td>酸梅棒棒糖 單價: NT$ 15<br>
+                    Preserved Plums Lollipop <br>Price: NT $15/EA
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec9()">-</button>
+                    <button type="button" class="btn btn-sm" id="count9" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc9()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/bb.png" width="200px"></td>
+                <td>可樂橡皮糖 單價: NT$ 10<br>
+                    Cola Gummy <br>Price: NT $10/PCs
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec1()">-</button>
+                    <button type="button" class="btn btn-sm" id="count1" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc1()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/cc.png" width="200px"></td>
+                <td>口哨糖 單價: NT$ 5<br>
+                    Whistle Candy <br>Price: NT $5/EA
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec2()">-</button>
+                    <button type="button" class="btn btn-sm" id="count2" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc2()">+</button>
+                </td>
             </tr>
             <tr>
                 <td><img src="../image/dd.png" width="200px"></td>
                 <td>足球巧克力 單價: NT$ 5<br>
                     Football Chocolate <br>Price: NT $5/EA
                 </td>
-                <td>2</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec3()">-</button>
+                    <button type="button" class="btn btn-sm" id="count3" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc3()">+</button>
+                </td>
             </tr>
             <tr>
                 <td><img src="../image/ee.png" width="200px"></td>
-                <td>跳跳糖 單價: NT$ 10/pac<br> 
+                <td>跳跳糖 單價: NT$ 10/pac<br>
                     Popping Candy <br> Price: NT$ 10/PK</td>
-                <td>5</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                        border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec4()">-</button>
+                    <button type="button" class="btn btn-sm" id="count4" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                        border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                        border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc4()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/ff.png" width="200px"></td>
+                <td>口香糖 單價: NT$ 15<br>
+                    Chewing Gum <br>Price: NT $15/Box
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec5()">-</button>
+                    <button type="button" class="btn btn-sm" id="count5" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc5()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/gg.png" width="200px"></td>
+                <td>彈珠汽水 單價: NT$ 45<br>
+                    Marble Soda <br>Price: NT $45/BTL
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec6()">-</button>
+                    <button type="button" class="btn btn-sm" id="count6" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc6()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/hh.png" width="200px"></td>
+                <td>牙膏巧克力 單價: NT$ 10<br>
+                    Chocolate Toothpaste <br>Price: NT $10/Tube
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec7()">-</button>
+                    <button type="button" class="btn btn-sm" id="count7" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc7()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="../image/ii.png" width="200px"></td>
+                <td>麵茶 單價: NT$ 15<br>
+                    Roasted Wheat Flour <br>Price: NT $15/PK
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="dec8()">-</button>
+                    <button type="button" class="btn btn-sm" id="count8" style="width: 30px; height: 45px; width: 90px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;">0</button>
+                    <button type="button" class="btn btn-primary btn-sm " style="width: 30px; height: 45px; background-color: rgba(252, 252, 252, 0.822);
+                    border: 2px solid #4e1f08c5; border-radius: 3px; font-size: 25px;" onclick="insc8()">+</button>
+                </td>
             </tr>
         </table><br>
-        <div><input type="text" name="address" placeholder="輸入收件地址  Please enter your shipping address." style="position: relative; top: 200px; width: 750px; font-size: 20px;"></div>
+        <div><input type="text" name="address" placeholder="輸入收件地址  Please enter your shipping address."
+                style="position: relative; top: 200px; width: 750px; font-size: 20px;"></div>
         <div class="price">Total: NT$ 60</div>
-        <input style="position: relative; top: 235px; left: -40px;" type="submit" id="sendout" value="Send Out"></a>
+        <input style="position: relative; top: 235px; left: 0px;" type="submit" id="sendout" value="Send Out"></a>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -68,19 +183,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
         </script>
 
-        <script>
-            $(document).ready(function () {
-                $("#testimonial-slider").owlCarousel({
-                    items: 3,
-                    itemsDesktop: [1000, 3],
-                    itemsDesktopSmall: [979, 2],
-                    itemsTablet: [768, 2],
-                    itemsMoblie: [650, 1],
-                    pagination: true,
-                    autoPlay: true
-                })
-            });
-        </script>
+        <script text="javascript" src="../link/jq.js"></script>
     </div>
 </div>
 <div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com" style="color: #f4770b;">&emsp;click
