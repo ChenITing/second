@@ -27,7 +27,8 @@
             <li><img src="../image/playern.gif" width="100"><audio muted src="../music/雨夜花.mp3" controls autoplay
                     loop></audio></li>
             <li><a href="../index.html" style="color: #4e1f08c5;">Home</a></li>
-            <li><a href="../link/shopping bag.html" style="color: #4e1f08c5;"><img src="../image/bag.png" width="30px">&emsp;Shopping Bag</a>
+            <li><a href="../link/shopping bag.html" style="color: #4e1f08c5;"><img src="../image/bag.png"
+                        width="30px">&emsp;Shopping Bag</a>
             </li>
             <li><a href="../link/ourPrduct.html" style="color: #4e1f08c5;">Our Products</a></li>
             <li><a href="../link/Top Sale.html" style="color: #4e1f08c5;">Top Sales</a></li>
@@ -42,64 +43,82 @@
     <div class="wrapper">
         <div class="content">
             <img class="user" src="../image/user.png" width="300px">
-            <input type="button" value="Submit" class="submit">
+            <input type="button" value="Submit" class="submit" ; style="margin-top: 500px;left: 700px;">
             <div class="e">
-                
-                <input type="reset" value="reset" class="reset">&ensp;姓名 :&ensp;<input type="text" placeholder="User Name" style="width: 300; height: 20px;  text-align: center;"><br>
-                <input type="reset" value="reset" class="reset">&ensp;帳號 : &ensp;<input type="text" placeholder="Account Number" style="width: 300; height: 20px;  text-align: center;"><br>
-                <input type="reset" value="reset" class="reset">&ensp;密碼 :&ensp;<input type="text" placeholder="Pass Word" style="width: 300; height: 20px;  text-align: center;"><br>
-                <input type="reset" value="reset" class="reset">&ensp;電話 : &ensp;<input type="text" placeholder="TEL" style="width: 300; height: 20px;  text-align: center;"><br>
-                <input type="reset" value="reset" class="reset">&ensp;電子郵件 :&ensp;<input type="text" placeholder="E-mail" style="width: 300; height: 20px; text-align: center;"><br></div>
-                <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
-                </script>
-
-                <script>
-                    $(document).ready(function () {
-                        $("#testimonial-slider").owlCarousel({
-                            items: 3,
-                            itemsDesktop: [1000, 3],
-                            itemsDesktopSmall: [979, 2],
-                            itemsTablet: [768, 2],
-                            itemsMoblie: [650, 1],
-                            pagination: true,
-                            autoPlay: true
-                        })
-                    });
-
-                    $(function () {
-                        $('.qtyplus').click(function (e) {
-                            e.preventDefault();
-
-                            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-                            if (!isNaN(currentVal)) {
-                                $('input[name=' + fieldName + ']').val(currentVal + 1);
-                            } else {
-                                $('input[name=' + fieldName + ']').val(0);
-                            }
-                        });
-                        $(".qtyminus").click(function (e) {
-                            e.preventDefault();
-                            fieldName = $(this).attr('field');
-                            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-                            if (!isNaN(currentVal) && currentVal > 0) {
-                                $('input[name=' + fieldName + ']').val(currentVal - 1);
-                            } else {
-                                $('input[name=' + fieldName + ']').val(0);
-                            }
-                        });
-                    });
-                </script>
+                <input type="reset" value="reset" class="reset">&ensp;姓名 :&ensp;<input type="text"
+                    placeholder="User Name" style="width: 300; height: 20px;  text-align: center;"><br>
+                <input type="reset" value="reset" class="reset">&ensp;帳號 : &ensp;<input type="text"
+                    placeholder="Account Number" style="width: 300; height: 20px;  text-align: center;"><br>
+                <input type="reset" value="reset" class="reset">&ensp;密碼 :&ensp;<input type="text"
+                    placeholder="Pass Word" style="width: 300; height: 20px;  text-align: center;"><br>
+                <input type="reset" value="reset" class="reset">&ensp;電話 : &ensp;<input type="text" placeholder="TEL"
+                    style="width: 300; height: 20px;  text-align: center;"><br>
+                <input type="reset" value="reset" class="reset">&ensp;電子郵件 :&ensp;<input type="text"
+                    placeholder="E-mail" style="width: 300; height: 20px; text-align: center;"><br><br><br>
+                <div style="position: relative;top: -6px;left: 100px;text-align: center; width: 410px;">
+                    <hr>Consumption record:
+                    <hr>口哨糖10個 &ensp; 總計:$50<br>
+                </div>
+                <div style="position:relative;left: -600px;top:-150px;text-align: center; width: 650px;">
+                    <hr>Comment
+                    <hr>
+                    <p style="text-align: left;">小櫻:酸酸甜甜的真好吃-酸梅棒棒糖</p>
+                    <p style="text-align: left;">老鼠:QQ der好喜歡-橡皮糖</p>
+                    <p style="text-align: left;">天空藍:真的是童年的味道！好懷念喔！-口香糖</p>
+                </div>
             </div>
-            <div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com"
-                    style="color: #E97E2E;">&emsp;click
-                    here!</a>&emsp;Copyright@2020&ensp;cyim105&ensp;IMHuaiJiuGanZaiDian &emsp;for
-                learning<br>Tel:886-3-265-5401&emsp;Address: 320314 No. 200, Zhongbei Rd., Zhongli Dist., Taoyuan City
-                320314, Taiwan (R.O.C.)
-            </div>
+            <script src="https://code.jquery.com/jquery-3.5.1.js">
+            </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js">
+            </script>
+
+            <script>
+                $(document).ready(function () {
+                    $("#testimonial-slider").owlCarousel({
+                        items: 3,
+                        itemsDesktop: [1000, 3],
+                        itemsDesktopSmall: [979, 2],
+                        itemsTablet: [768, 2],
+                        itemsMoblie: [650, 1],
+                        pagination: true,
+                        autoPlay: true
+                    })
+                });
+
+                $(function () {
+                    $('.qtyplus').click(function (e) {
+                        e.preventDefault();
+
+                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                        if (!isNaN(currentVal)) {
+                            $('input[name=' + fieldName + ']').val(currentVal + 1);
+                        } else {
+                            $('input[name=' + fieldName + ']').val(0);
+                        }
+                    });
+                    $(".qtyminus").click(function (e) {
+                        e.preventDefault();
+                        fieldName = $(this).attr('field');
+                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                        if (!isNaN(currentVal) && currentVal > 0) {
+                            $('input[name=' + fieldName + ']').val(currentVal - 1);
+                        } else {
+                            $('input[name=' + fieldName + ']').val(0);
+                        }
+                    });
+                });
+            </script>
         </div>
-        </body>
+        <div class="footer" align="center">e-mail to us:<a href="mailto:a10250168@gmail.com"
+                style="color: #E97E2E;">&emsp;click
+                here!</a>&emsp;Copyright@2020&ensp;cyim105&ensp;IMHuaiJiuGanZaiDian &emsp;for
+            learning<br>Tel:886-3-265-5401&emsp;Address: 320314 No. 200, Zhongbei Rd., Zhongli Dist., Taoyuan City
+            320314, Taiwan (R.O.C.)
+        </div>
+    </div>
+    </body>
 
 </html>
 </body>
